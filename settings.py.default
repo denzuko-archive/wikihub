@@ -1,0 +1,79 @@
+# Django settings for wiki project.
+import os
+import sys
+
+#try:
+#   import psyco
+#   psyco.full()
+#except ImportError:
+#   sys.stderr.write('Warn: Psyco is not installed, this application will just run slower')
+
+_DIRNAME = os.path.abspath(os.path.dirname(globals()["__file__"]))
+
+DEBUG = True
+TEMPLATE_DEBUG = DEBUG
+
+ADMINS = (
+    # ('Your Name', 'your_email@domain.com'),
+)
+
+MANAGERS = ADMINS
+
+# Make this unique, and don't share it with anybody.
+SECRET_KEY = ''
+
+#_DIRNAME = os.path.dirname(globals()["__file__"])
+#sys.path.append(os.path.join(_DIRNAME, 'support'))
+
+DATABASE_ENGINE = '' # 'mysql' or 'sqlite3'
+DATABASE_NAME = ''  # database table or filename
+# SQL Server Settings
+DATABASE_USER = ''
+DATABASE_PASSWORD = ''
+DATABASE_HOST = ''        # localhost:default
+DATABASE_PORT = ''
+
+TIME_ZONE = 'America/Denver'
+
+LANGUAGE_CODE = 'en-us'
+
+SITE_ID = 1
+
+USE_I18N = True
+MEDIA_ROOT = os.path.join(_DIRNAME, "media")
+
+# URL that handles the media served from MEDIA_ROOT. Make sure to use a
+# trailing slash if there is a path component (optional in other cases).
+# Examples: "http://media.lawrence.com", "http://example.com/media/"
+MEDIA_URL = ''
+
+ADMIN_MEDIA_PREFIX = '/media/'
+
+# List of callables that know how to import templates from various sources.
+TEMPLATE_LOADERS = (
+    'django.template.loaders.filesystem.load_template_source',
+    'django.template.loaders.app_directories.load_template_source',
+#     'django.template.loaders.eggs.load_template_source',
+)
+
+MIDDLEWARE_CLASSES = (
+    'django.middleware.common.CommonMiddleware',
+    'django.contrib.sessions.middleware.SessionMiddleware',
+    'django.contrib.auth.middleware.AuthenticationMiddleware',
+)
+
+ROOT_URLCONF = 'wikihub.urls'
+
+TEMPLATE_DIRS = (
+    os.path.join(_DIRNAME, "templates")
+)
+
+INSTALLED_APPS = (
+    'django.contrib.auth',
+    'django.contrib.contenttypes',
+    'django.contrib.sessions',
+    'django.contrib.sites',
+    'django.contrib.admindocs',
+    'django.contrib.admin',
+    'wikihub.wiki'
+)
