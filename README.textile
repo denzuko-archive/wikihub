@@ -1,5 +1,6 @@
 h1. WikiHub
-A Social Knolledgebase Wiki writen in Django.
+
+A Social Knowledge base Wiki writen in Django.
 
 h2. License
 
