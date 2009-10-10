@@ -1,0 +1,11 @@
+h1. WikiHub
+A Social Knolledgebase Wiki writen in Django.
+
+h2. License
+
+The following directories and their contents are Copyright Dwight Spencer You may not reuse anything therein without my permission:
+
+* media/
+
+All other directories and files are MIT Licensed. HTML and CSS code is Public Domain Licenced and you may feel free to use as you please. If you do use them, a link back to http://github.com/denzuko/wikihub would be appreciated, but is not required.
+
